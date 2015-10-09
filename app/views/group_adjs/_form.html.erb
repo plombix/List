@@ -1,0 +1,25 @@
+<%= form_for(@group_adj) do |f| %>
+  <% if @group_adj.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@group_adj.errors.count, "error") %> prohibited this group_adj from being saved:</h2>
+
+      <ul>
+      <% @group_adj.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :adj_id %><br>
+    <%= f.text_field :adj_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

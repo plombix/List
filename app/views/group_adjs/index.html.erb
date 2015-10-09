@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Group Adjs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Adj</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @group_adjs.each do |group_adj| %>
+      <tr>
+        <td><%= group_adj.name %></td>
+        <td><%= group_adj.adj %></td>
+        <td><%= link_to 'Show', group_adj %></td>
+        <td><%= link_to 'Edit', edit_group_adj_path(group_adj) %></td>
+        <td><%= link_to 'Destroy', group_adj, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Group adj', new_group_adj_path %>

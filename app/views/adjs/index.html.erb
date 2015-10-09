@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Adjs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adjs.each do |adj| %>
+      <tr>
+        <td><%= adj.name %></td>
+        <td><%= link_to 'Show', adj %></td>
+        <td><%= link_to 'Edit', edit_adj_path(adj) %></td>
+        <td><%= link_to 'Destroy', adj, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adj', new_adj_path %>

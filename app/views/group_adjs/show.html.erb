@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @group_adj.name %>
+</p>
+
+<p>
+  <strong>Adj:</strong>
+  <%= @group_adj.adj %>
+</p>
+
+<%= link_to 'Edit', edit_group_adj_path(@group_adj) %> |
+<%= link_to 'Back', group_adjs_path %>
